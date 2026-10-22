@@ -1,0 +1,197 @@
+export const restaurants = [
+  {
+    id: 'a-1',
+    name: 'Green Bowl Co.',
+    cuisine: 'Healthy Bowls',
+    rating: 4.8,
+    eta: 18,
+    deliveryFee: 2.4,
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
+    tags: ['Vegan', 'High Protein', 'Popular'],
+    open: true,
+  },
+  {
+    id: 'a-2',
+    name: 'Saffron Street',
+    cuisine: 'Indian Fusion',
+    rating: 4.9,
+    eta: 24,
+    deliveryFee: 3.1,
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
+    tags: ['Family Favorite', 'Spicy'],
+    open: true,
+  },
+  {
+    id: 'a-3',
+    name: 'Luna Pizza',
+    cuisine: 'Italian',
+    rating: 4.7,
+    eta: 21,
+    deliveryFee: 2.9,
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80',
+    tags: ['Gluten Free', 'Wood Fired'],
+    open: true,
+  },
+  {
+    id: 'a-4',
+    name: 'Tokyo Bites',
+    cuisine: 'Japanese',
+    rating: 4.8,
+    eta: 27,
+    deliveryFee: 3.4,
+    image: 'https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=80',
+    tags: ['Chef Special', 'Top Rated'],
+    open: true,
+  },
+];
+
+export const restaurantMenus: Record<string, any[]> = {
+  'a-1': [
+    {
+      id: 'm-1',
+      name: 'Citrus Quinoa Bowl',
+      description: 'Quinoa, avocado, edamame, greens, citrus dressing.',
+      price: 14.5,
+      category: 'Bowls',
+      dietary: ['Vegan', 'High Protein'],
+      modifiers: ['Add tofu', 'Extra protein', 'No dressing'],
+    },
+    {
+      id: 'm-2',
+      name: 'Mango Chia Oats',
+      description: 'Coconut milk oats topped with mango and chia seeds.',
+      price: 9.2,
+      category: 'Breakfast',
+      dietary: ['Vegan', 'Gluten Free'],
+      modifiers: ['Extra fruit', 'Almond crunch'],
+    },
+    {
+      id: 'm-3',
+      name: 'Harissa Cauli Wrap',
+      description: 'Charred cauliflower, hummus, greens and tahini.',
+      price: 12.8,
+      category: 'Wraps',
+      dietary: ['Vegetarian'],
+      modifiers: ['Add fries', 'Extra sauce'],
+    },
+  ],
+  'a-2': [
+    {
+      id: 'm-4',
+      name: 'Paneer Tikka Bowl',
+      description: 'Smoky paneer, basmati rice, raita and charred veggies.',
+      price: 16.9,
+      category: 'Chef Picks',
+      dietary: ['Vegetarian'],
+      modifiers: ['Spicy level', 'Extra naan', 'No onion'],
+    },
+    {
+      id: 'm-5',
+      name: 'Butter Chicken',
+      description: 'Slow-cooked chicken in a rich tomato butter sauce.',
+      price: 18.5,
+      category: 'Curries',
+      dietary: ['High Protein'],
+      modifiers: ['Mild', 'Medium', 'Hot'],
+    },
+    {
+      id: 'm-6',
+      name: 'Masala Fries',
+      description: 'Crispy fries tossed in chaat masala and herbs.',
+      price: 7.1,
+      category: 'Sides',
+      dietary: ['Vegetarian'],
+      modifiers: ['Extra dip', 'Large'],
+    },
+  ],
+  'a-3': [
+    {
+      id: 'm-7',
+      name: 'Margherita Pizza',
+      description: 'Fresh mozzarella, basil and tomato sauce.',
+      price: 15.4,
+      category: 'Classic',
+      dietary: ['Vegetarian'],
+      modifiers: ['Add olives', 'Gluten-free base', 'Extra basil'],
+    },
+    {
+      id: 'm-8',
+      name: 'Truffle Mushroom Pizza',
+      description: 'Wild mushrooms, caramelized onion and truffle cream.',
+      price: 18.9,
+      category: 'Signature',
+      dietary: ['Vegetarian'],
+      modifiers: ['Thin crust', 'Extra cheese'],
+    },
+    {
+      id: 'm-9',
+      name: 'Garden Salad',
+      description: 'Lettuce, cucumber, cherry tomatoes, balsamic glaze.',
+      price: 10.8,
+      category: 'Salads',
+      dietary: ['Vegan', 'Gluten Free'],
+      modifiers: ['Extra avocado', 'No dressing'],
+    },
+  ],
+  'a-4': [
+    {
+      id: 'm-10',
+      name: 'Salmon Teriyaki',
+      description: 'Roasted salmon with teriyaki glaze and sesame greens.',
+      price: 21.8,
+      category: 'Entrees',
+      dietary: ['High Protein'],
+      modifiers: ['Add rice', 'Extra sauce'],
+    },
+    {
+      id: 'm-11',
+      name: 'Dragon Roll',
+      description: 'Tempura shrimp, avocado and spicy mayo roll.',
+      price: 16.2,
+      category: 'Sushi',
+      dietary: ['Shellfish'],
+      modifiers: ['No mayo', 'Extra wasabi'],
+    },
+    {
+      id: 'm-12',
+      name: 'Miso Noodle Bowl',
+      description: 'Soba noodles, umami broth, vegetables and tofu.',
+      price: 13.4,
+      category: 'Bowls',
+      dietary: ['Vegan'],
+      modifiers: ['Extra tofu', 'Spicy miso'],
+    },
+  ],
+};
+
+export const orderQueue = [
+  { id: 'ord-101', restaurant: 'Green Bowl Co.', customer: 'Aisha M.', status: 'Preparing', total: 32.5, eta: '12 min' },
+  { id: 'ord-102', restaurant: 'Saffron Street', customer: 'Daniel R.', status: 'Placed', total: 41.8, eta: '18 min' },
+  { id: 'ord-103', restaurant: 'Luna Pizza', customer: 'Priya L.', status: 'Out for Delivery', total: 27.2, eta: '6 min' },
+];
+
+export const driverTrips = [
+  { id: 'trip-1', customer: 'Nadia P.', pickup: 'Green Bowl Co.', dropoff: '8 Bayfront Ave', eta: '9 min', distance: '3.4 km' },
+  { id: 'trip-2', customer: 'Marcus T.', pickup: 'Saffron Street', dropoff: '17 Lake Road', eta: '13 min', distance: '5.8 km' },
+  { id: 'trip-3', customer: 'Sonia K.', pickup: 'Luna Pizza', dropoff: '42 Cedar Ln', eta: '7 min', distance: '2.7 km' },
+];
+
+export const salesStats = [
+  { label: 'Total Sales', value: '$24,560', change: '+18.4%' },
+  { label: 'Orders Today', value: '348', change: '+12.1%' },
+  { label: 'Avg. Basket', value: '$72.10', change: '+6.3%' },
+  { label: 'Delivery Success', value: '97.8%', change: '+2.1%' },
+];
+
+export const adminTransactions = [
+  { name: 'Ava Johnson', type: 'Card Payment', amount: '$28.40', status: 'Paid' },
+  { name: 'Chris Moore', type: 'Wallet', amount: '$17.90', status: 'Pending' },
+  { name: 'Nina Shaw', type: 'Card Payment', amount: '$53.10', status: 'Paid' },
+  { name: 'Owen Lee', type: 'Apple Pay', amount: '$64.70', status: 'Paid' },
+];
+
+export const customerOrders = [
+  { id: 'Customer-2', status: 'Preparing', eta: '14 min', restaurant: 'Green Bowl Co.' },
+  { id: 'Customer-1', status: 'Out for Delivery', eta: '6 min', restaurant: 'Saffron Street' },
+  { id: 'Customer-3', status: 'Delivered', eta: 'Delivered at 7:45 PM', restaurant: 'Luna Pizza' },
+];
